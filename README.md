@@ -46,14 +46,13 @@ For questions or issues please use the [Google Group](https://groups.google.com/
 3)Reducing the mini_batch size = batch/subdivisions will increase the computation speed.
 
 4)Weights with highest mAP should be chosen for best results.
-## to calculate the mAP use command:
+## To calculate the mAP use command:
 Example : darknet.exe detector recall data/obj.data yolo-obj.cfg backup\yolo-obj_7000.weights
 
 
 6)Increasing the number of anchors , increases the avg IOU and possibility to detect the small classes.But remember to change the masks.
-#### Note : Don't do this unless you are an expert in DL or CNN, bcz this will throw an error.
+#### Note : Don't do this unless you are an expert in DL or CNN, because this will throw an error.
 7)Increasing the max_batches resulted in increase in loss after 12000(num of class = 6, max_batches = num_class * 2000)
 ####To test on video and capture bbox:
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights test.mp4 -dont_show -ext_output
-#### Future Work:
-Build Models using yolov4,yolov3.spp and yolov3_5l as they are customised model and can help in detecting small objects in large images.
+
